@@ -9,12 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var eightBallImage: UIImageView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func startButton(_ sender: UIButton) {
+        let imageOfEightBall = ["ball1", "ball2", "ball3", "ball4", "ball5"]
+        eightBallImage.image = UIImage(named: imageOfEightBall[Int.random(in: 0...4)])
     }
-
+    
 
 }
 
